@@ -1,0 +1,51 @@
+{
+	"enableCluster": false,
+	"theme": "default",
+	"port" : 8080,
+	"domain": "localhost",
+	"proto" : "http",
+	"dataDir" : "data",
+	"auth" : {
+		"facebook": {
+			"appID": "",
+			"appSecret": ""
+		},
+		"google":{
+			"clientID": "",
+			"clientSecret": ""
+		}
+	},
+	"session":{
+		"store" : false,
+		"secret": "key1234",
+		"options":{
+			"prefix": "shelloid_"
+		}
+	},
+	"databases":{
+		"cache" : {
+			"ignore" : true,
+			"type": "redis",
+			"password": "",
+			"host" : "localhost"
+		},
+		"invitedb" : {
+			"ignore" : true,
+			"type": "mysql",
+			"user": "root",
+			"password": "",
+			"host" : "localhost",
+			"database": "",
+			"maxConnections": 20,
+			"timezone": "local"
+		}		
+	},
+	"app":{
+		"sampleUser": "user",
+		"samplePass" : "pass",
+		"apiKeys":{
+			"key1" : "secret1"
+		}
+	}
+}
+

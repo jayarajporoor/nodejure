@@ -1,0 +1,50 @@
+{
+	"enableCluster": true,
+	"theme": "default",
+	"port" : 8080,
+	"domain": "localhost",
+	"proto" : "http",
+	"dataDir" : "data",
+	"auth" : {
+		"facebook": {
+			"appID": "",
+			"appSecret": ""
+		},
+		"google":{
+			"clientID": "",
+			"clientSecret": ""
+		}
+	},
+	"session":{
+		"note": "Set up redis and set store to 'cache' to enable sessions.",
+		"store" : false,
+		"secret": "key1234",
+		"options":{
+			"prefix": "shelloid_"
+		}
+	},
+	"databases":{
+		"cache" : {
+			"ignore": true,
+			"type": "redis",
+			"password": "",
+			"host" : "localhost"
+		},
+		"invitedb" : {
+			"ignore": true,
+			"type": "mysql",
+			"user": "root",
+			"password": "",
+			"host" : "localhost",
+			"database": "",
+			"maxConnections": 20,
+			"timezone": "local"
+		}		
+	},
+	"app":{
+		"sampleUser": "",
+		"samplePass" : "",
+		"apiKeys" :{}
+	}
+}
+

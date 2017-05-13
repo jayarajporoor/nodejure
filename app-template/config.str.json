@@ -1,0 +1,70 @@
+{
+	"enableCluster": false,
+	"theme": "default",
+	"port" : 8080,
+	"domain": "localhost",
+	"proto" : "https",
+	"dataDir" : "data",
+	"ccs": {
+		"enable": false, 
+		"services": ["add"]
+	},
+	"https":{
+		"enable": true,
+		"key": "certs/key.pem",
+		"cert": "certs/server.pem",
+		"ca" : "certs/ca.pem"
+	},
+	"auth" : {
+		"nest": {
+			"nestID": "",
+			"nestSecret": ""
+		},	
+		"facebook": {
+			"appID": "",
+			"appSecret": ""
+		},
+		"google":{
+			"clientID": "",
+			"clientSecret": ""
+		}
+	},
+	"session":{
+		"store" : false,
+		"secret": "key1234",
+		"options":{
+			"prefix": "shelloid_"
+		}
+	},
+	"databases":{
+		"streamdb":{
+			"ignore" : true,
+			"type" : "mongodb",
+			"url": "mongodb://localhost/streamdb"
+		},	
+		"cache" : {
+			"ignore" : true,
+			"type": "redis",
+			"password": "",
+			"host" : "localhost"
+		},
+		"invitedb" : {
+			"ignore" : true,
+			"type": "mysql",
+			"user": "root",
+			"password": "",
+			"host" : "localhost",
+			"database": "",
+			"maxConnections": 20,
+			"timezone": "local"
+		}		
+	},
+	"app":{
+		"sampleUser": "user",
+		"samplePass" : "pass",
+		"apiKeys":{
+			"key1" : "secret1"
+		}
+	}
+}
+
